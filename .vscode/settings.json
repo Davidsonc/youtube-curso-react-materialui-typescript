@@ -1,6 +1,10 @@
 {
     "cSpell.words": [
+        "linebreak",
         "materialui",
         "youtube"
-    ]
+    ],
+    "prettier.endOfLine": "crlf",
+    "vs-code-prettier-eslint.prettierLast": true,
+    "prettier.bracketSameLine": true
 }
