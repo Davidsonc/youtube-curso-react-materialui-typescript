@@ -18,31 +18,32 @@ interface IAppThemeProviderProps {
 }
 
 export const useAppThemeContext = () => {
-    return useContext(ThemeContext)
-}
+  return useContext(ThemeContext);
+};
 
+// eslint-disable-next-line react/prop-types
 export const AppThemeProvider: React.FC<IAppThemeProviderProps> = ({ children }) =>{
-    const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
-    const toggleTheme = useCallback(()=>{
-        setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');
-    }, []);
+  const [themeName, setThemeName] = useState<'light' | 'dark'>('light');
+  const toggleTheme = useCallback(()=>{
+    setThemeName(oldThemeName => oldThemeName === 'light' ? 'dark' : 'light');
+  }, []);
     
-    const theme = useMemo(()=>{
-        if(themeName === 'light') return LightTheme;
-        return DarkTheme;
-    }, [themeName]);
+  const theme = useMemo(()=>{
+    if(themeName === 'light') return LightTheme;
+    return DarkTheme;
+  }, [themeName]);
 
-    return (
-        <ThemeContext.Provider value={{ themeName, toggleTheme }}>
-            <ThemeProvider theme={theme}>
-                <Box width='100vw' height='100vh' bgcolor={theme.palette.background.default}>
-                    {children}
-                </Box>
-            </ThemeProvider>
-        </ThemeContext.Provider>
-    );
-}
+  return (
+    <ThemeContext.Provider value={{ themeName, toggleTheme }}>
+      <ThemeProvider theme={theme}>
+        <Box width='100vw' height='100vh' bgcolor={theme.palette.background.default}>
+          {children}
+        </Box>
+      </ThemeProvider>
+    </ThemeContext.Provider>
+  );
+};
 
 function useCallBack(arg0: () => void, arg1: never[]) {
-    throw new Error('Function not implemented.');
+  throw new Error('Function not implemented.');
 }
