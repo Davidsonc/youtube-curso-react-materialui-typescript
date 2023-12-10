@@ -6,16 +6,11 @@ import PropTypes from 'prop-types';
 interface ILayoutBaseDePaginaProps {
    children: React.ReactNode;
    titulo: string;
-   ferramentasDaListagem?: React.ReactNode | undefined;
+   barraDeFerramentas?: React.ReactNode | undefined;
 }
 
-export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ( {children, titulo, ferramentasDaListagem} ) => {
+export const LayoutBaseDePagina: React.FC<ILayoutBaseDePaginaProps> = ( {children, titulo, barraDeFerramentas: ferramentasDaListagem} ) => {
   
-  LayoutBaseDePagina.propTypes = {
-    children: PropTypes.node.isRequired,
-    ferramentasDaListagem: PropTypes.node,
-    titulo: PropTypes.string.isRequired,
-  };
   const smDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('sm'));
   const mdDown = useMediaQuery((theme: Theme) => theme.breakpoints.down('md'));
   const theme = useTheme();
