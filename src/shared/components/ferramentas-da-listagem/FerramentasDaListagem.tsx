@@ -1,9 +1,11 @@
 import { Box, Button, Icon, Paper, TextField, useTheme } from '@mui/material';
 
+import { Environment } from '../../environment';
+
 interface IFerramentasDaListagem {
   textoDaBusca?: string;
   mostrarInputBusca?: boolean;
-  aoMudarTextoDaBusca?: (novoTexto: string) => void;
+  aoMudarTextoDeBusca?: (novoTexto: string) => void;
 
   textoBotaoNovo?: string;
   mostrarBotaoNovo?: boolean;
@@ -12,7 +14,7 @@ interface IFerramentasDaListagem {
 export const FerramentasDaListagem: React.FC<IFerramentasDaListagem> = ({
   textoDaBusca = '',
   mostrarInputBusca = false,
-  aoMudarTextoDaBusca,
+  aoMudarTextoDeBusca,
   textoBotaoNovo = 'Novo',
   mostrarBotaoNovo = true,
   aoClicarEmNovo
@@ -34,9 +36,9 @@ export const FerramentasDaListagem: React.FC<IFerramentasDaListagem> = ({
       {mostrarInputBusca && (
         <TextField
           size='small'
-          placeholder='Pesquisar...'
           value={textoDaBusca}
-          onChange={(e) => aoMudarTextoDaBusca?.(e.target.value)}
+          placeholder={Environment.INPUT_DE_BUSCAS}
+          onChange={(e) => aoMudarTextoDeBusca?.(e.target.value)}
         />
       )}
 

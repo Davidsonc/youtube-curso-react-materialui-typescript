@@ -31,7 +31,7 @@ export const DrawerProvider: React.FC<IAppDrawerProviderProps> = ({ children }) 
   }, []);
   
   const handlerSetDrawerOptions = useCallback((newDrawerOptions: IDrawerOption[])=>{
-    setDrawerOptions(newDrawerOptions);
+    setDrawerOptions(newDrawerOptions );
   }, []);
     
   return (
