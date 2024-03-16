@@ -5,6 +5,8 @@
         "linebreak",
         "materialui",
         "Typografy",
+        "unform",
+        "Vform",
         "youtube"
     ],
     "prettier.endOfLine": "crlf",

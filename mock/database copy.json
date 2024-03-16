@@ -14,14 +14,25 @@
       "id": 7,
       "title": "fas",
       "isCompleted": false
+    },
+    {
+      "id": 8,
+      "title": "dsa",
+      "isCompleted": false
     }
   ],
   "pessoas": [
     {
       "id": 9,
+      "cidadeId": 1,
       "nomeCompleto": "Ana Maria Deus Lima",
-      "email": "dlima02@hotmail.com",
-      "cidadeId": 1
+      "email": "dlima02@hotmail.com"
+    },
+    {
+      "id": 10,
+      "cidadeId": 1,
+      "nomeCompleto": "Anaximenes do Nascimento",
+      "email": "anaximiento@hotmail.com"
     },
     {
       "id": 11,
@@ -43,9 +54,9 @@
     },
     {
       "id": 14,
+      "cidadeId": 1,
       "nomeCompleto": "António Faleiro",
-      "email": "antoniofaleiro@hotmail.com",
-      "cidadeId": 1
+      "email": "antoniofaleiro@hotmail.com"
     },
     {
       "id": 15,
